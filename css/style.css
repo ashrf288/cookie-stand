@@ -1,0 +1,56 @@
+header{
+    background-color: gray;
+    position: relative;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+
+header img{
+width: 200px;
+position: absolute;
+left: 0%;
+
+}
+
+header h1 {
+  padding: 10px;
+    font-size: 40px;
+    
+}
+body{
+    background-color: pink;
+    position: relative;
+    text-align: center;
+    color: white;
+    
+}
+
+
+a{
+    margin-top: 20px;
+   display: block;
+    text-decoration: none;
+    font-size: 30px;
+    
+    
+    
+  
+
+}
+
+li{
+    font-size: 20px;
+}
+
+p{
+    color:black;
+    font-size: 50px;
+    margin: 10px;
+}
+
+footer{
+
+    height: 30px;
+    color: gray;
+}
