@@ -1,7 +1,5 @@
 'use strict';
 
-console.log ('hi');
-
 let mainSection=document.getElementById('mainSection');
 
 
@@ -58,7 +56,7 @@ let tokyo={
     cookiesPerHourList:[],
 
     customersPerHour:function(min, max) {
-        return Math.random() * (seattle.maxCustomers - seattle.minCustomers) + seattle.minCustomers;
+        return Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers;
       },
       cookiesPerHour: function(){
           for(let i=0;i<this.workHouers.length;i++){
@@ -215,25 +213,22 @@ let lima={
 
 
 
-console.log(seattle.customersPerHour());
-console.log(seattle.cookiesPerHour(seattle.customersPerHour()));
-console.log(seattle.cookiesPerHourList);
+seattle.customersPerHour();
+seattle.cookiesPerHour(seattle.customersPerHour());
 seattle.render();
-console.log(tokyo.customersPerHour());
-console.log(tokyo.cookiesPerHour(tokyo.customersPerHour()));
-console.log(tokyo.cookiesPerHourList);
+tokyo.customersPerHour();
+tokyo.cookiesPerHour(tokyo.customersPerHour());
 tokyo.render();
-console.log(dubai.customersPerHour());
-console.log(dubai.cookiesPerHour(dubai.customersPerHour()));
-console.log(dubai.cookiesPerHourList);
+dubai.customersPerHour();
+dubai.cookiesPerHour(dubai.customersPerHour());
 dubai.render();
-console.log(paris.customersPerHour());
-console.log(paris.cookiesPerHour(paris.customersPerHour()));
-console.log(paris.cookiesPerHourList);
+paris.customersPerHour();
+paris.cookiesPerHour(paris.customersPerHour());
+
 paris.render();
-console.log(lima.customersPerHour());
-console.log(lima.cookiesPerHour(lima.customersPerHour()));
-console.log(lima.cookiesPerHourList);
+lima.customersPerHour();
+lima.cookiesPerHour(lima.customersPerHour());
+
 lima.render();
 
 
