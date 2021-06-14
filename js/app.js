@@ -13,11 +13,11 @@ let seattle={
     cookiesPerHourList:[],
 
     customersPerHour:function(min, max) {
-        return Math.random() * (seattle.maxCustomers - seattle.minCustomers) + seattle.minCustomers;
+        return Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers;
       },
       cookiesPerHour: function(){
           for(let i=0;i<this.workHouers.length;i++){
-              this.cookiesPerHourList.push( Math.floor(seattle.customersPerHour()*this.average));   
+              this.cookiesPerHourList.push( Math.floor(this.customersPerHour()*this.average));   
           }
       },
       
@@ -65,13 +65,13 @@ let tokyo={
       },
       
     render:function(){
-        let seattleSection = document.createElement('section');
-        mainSection.appendChild(seattleSection);
+        let tokyoSection = document.createElement('section');
+        mainSection.appendChild(tokyoSection);
         let cityBio=document.createElement('p');
         cityBio.textContent=`${this.cityName}`
-        seattleSection.appendChild(cityBio);
+        tokyoSection.appendChild(cityBio);
         let salesList=document.createElement('ul');
-        seattleSection.appendChild(salesList);
+        tokyoSection.appendChild(salesList);
         for(let j=0;j<this.cookiesPerHourList.length;j++){
             let hourSales=document.createElement('li');
             hourSales.textContent= `${this.workHouers[j]} : ${this.cookiesPerHourList[j]} cookies`
@@ -97,22 +97,22 @@ let dubai={
     cookiesPerHourList:[],
 
     customersPerHour:function(min, max) {
-        return Math.random() * (seattle.maxCustomers - seattle.minCustomers) + seattle.minCustomers;
+        return Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers;
       },
       cookiesPerHour: function(){
           for(let i=0;i<this.workHouers.length;i++){
-              this.cookiesPerHourList.push(Math.floor(seattle.customersPerHour()*this.average));   
+              this.cookiesPerHourList.push(Math.floor(this.customersPerHour()*this.average));   
           }
       },
       
     render:function(){
-        let seattleSection = document.createElement('section');
-        mainSection.appendChild(seattleSection);
+        let dubaiSection = document.createElement('section');
+        mainSection.appendChild(dubaiSection);
         let cityBio=document.createElement('p');
         cityBio.textContent=`${this.cityName}`
-        seattleSection.appendChild(cityBio);
+        dubaiSection.appendChild(cityBio);
         let salesList=document.createElement('ul');
-        seattleSection.appendChild(salesList);
+        dubaiSection.appendChild(salesList);
         for(let j=0;j<this.cookiesPerHourList.length;j++){
             let hourSales=document.createElement('li');
             hourSales.textContent= `${this.workHouers[j]} : ${this.cookiesPerHourList[j]} cookies`
@@ -138,22 +138,22 @@ let paris={
     cookiesPerHourList:[],
 
     customersPerHour:function(min, max) {
-        return Math.random() * (seattle.maxCustomers - seattle.minCustomers) + seattle.minCustomers;
+        return Math.random() * (this.maxCustomers - this.minCustomers) + this.minCustomers;
       },
       cookiesPerHour: function(){
           for(let i=0;i<this.workHouers.length;i++){
-              this.cookiesPerHourList.push(Math.floor(seattle.customersPerHour()*this.average));   
+              this.cookiesPerHourList.push(Math.floor(this.customersPerHour()*this.average));   
           }
       },
       
     render:function(){
-        let seattleSection = document.createElement('section');
-        mainSection.appendChild(seattleSection);
+        let paris = document.createElement('section');
+        mainSection.appendChild(paris);
         let cityBio=document.createElement('p');
         cityBio.textContent=`${this.cityName}`
-        seattleSection.appendChild(cityBio);
+        paris.appendChild(cityBio);
         let salesList=document.createElement('ul');
-        seattleSection.appendChild(salesList);
+        paris.appendChild(salesList);
         for(let j=0;j<this.cookiesPerHourList.length;j++){
             let hourSales=document.createElement('li');
             hourSales.textContent= `${this.workHouers[j]} : ${this.cookiesPerHourList[j]} cookies`
