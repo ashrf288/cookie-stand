@@ -24,9 +24,11 @@ let seattle = {
     render: function () {
         let seattleSection = document.createElement('section');
         mainSection.appendChild(seattleSection);
+        
         let cityBio = document.createElement('p');
         cityBio.textContent = `${this.cityName}`
         seattleSection.appendChild(cityBio);
+        
         let salesList = document.createElement('ul');
         seattleSection.appendChild(salesList);
         for (let j = 0; j < this.cookiesPerHourList.length; j++) {
@@ -67,9 +69,11 @@ let tokyo = {
     render: function () {
         let tokyoSection = document.createElement('section');
         mainSection.appendChild(tokyoSection);
+        
         let cityBio = document.createElement('p');
         cityBio.textContent = `${this.cityName}`
         tokyoSection.appendChild(cityBio);
+        
         let salesList = document.createElement('ul');
         tokyoSection.appendChild(salesList);
         for (let j = 0; j < this.cookiesPerHourList.length; j++) {
@@ -108,9 +112,11 @@ let dubai = {
     render: function () {
         let dubaiSection = document.createElement('section');
         mainSection.appendChild(dubaiSection);
+        
         let cityBio = document.createElement('p');
         cityBio.textContent = `${this.cityName}`
         dubaiSection.appendChild(cityBio);
+        
         let salesList = document.createElement('ul');
         dubaiSection.appendChild(salesList);
         for (let j = 0; j < this.cookiesPerHourList.length; j++) {
@@ -149,9 +155,11 @@ let paris = {
     render: function () {
         let paris = document.createElement('section');
         mainSection.appendChild(paris);
+        
         let cityBio = document.createElement('p');
         cityBio.textContent = `${this.cityName}`
         paris.appendChild(cityBio);
+        
         let salesList = document.createElement('ul');
         paris.appendChild(salesList);
         for (let j = 0; j < this.cookiesPerHourList.length; j++) {
@@ -190,9 +198,11 @@ let lima = {
     render: function () {
         let limaSection = document.createElement('section');
         mainSection.appendChild(limaSection);
+        
         let cityBio = document.createElement('p');
         cityBio.textContent = `${this.cityName}`
         limaSection.appendChild(cityBio);
+        
         let salesList = document.createElement('ul');
         limaSection.appendChild(salesList);
         for (let j = 0; j < this.cookiesPerHourList.length; j++) {
