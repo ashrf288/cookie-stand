@@ -71,12 +71,12 @@ function footer() {
 
 ///// object start
 
-function City(name, minCustomers, maxCustomers) {
+function City(name, minCustomers, maxCustomers,avg) {
     this.cityName = name;
     this.minCustomers = minCustomers;
     this.maxCustomers = maxCustomers;
-    this.average = 6.3,
-        this.cookiesPerHourList = [];
+    this.average = avg,
+    this.cookiesPerHourList = [];
     this.total = 0;
 }
 

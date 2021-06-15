@@ -1,77 +1,94 @@
-header{
-    background-color: gray;
-    position: relative;
-    height: 100px;
-    margin-bottom: 30px;
-}
-
-
-header img{
-width: 200px;
-position: absolute;
-left: 0%;
-
-}
-
-header h1 {
-  padding: 10px;
-    font-size: 40px;
-    
-}
 body{
-    background-color: pink;
-    position: relative;
-    text-align: center;
-    color: white;
-    
+    background-color: #A9F1DF;
 }
 
-
-a{
-    margin-top: 20px;
-   display: block;
-    text-decoration: none;
+header{
+    display: flex;
+   align-items: center;
+    justify-content: space-between;
+    background-color: #A6F2DB;
+    margin-bottom: 20px;
+}
+header img {
+    width:200px;
+}
+header h1{
     font-size: 30px;
-    
-    
-    
-  
-
+    font-weight: bold;
+}
+header a{
+    text-decoration: none;
+    color:white;
+    font-size: 30px;
+    padding-right: 10px;
 }
 
 
-p{
-    color:black;
-    font-size: 50px;
+h2.cityName{
+    font-weight: bold;
+}
+
+
+.hero-image{
+    width: 100%;
+}
+.back-div{
+    background-color: #4F4E79;
+    border-radius: 12px;
     margin: 10px;
 }
-
-footer{
+.back-div h1,.tag1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+.locations{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 60;
+    margin-bottom: 10px;
+    gap: 30px;
+    padding: 30px;
+}
+.city{
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
     
-    height: 30px;
-    color: gray;
 }
 
-table{
-   border: 1px solid black;
+.div{
+    width: 70%;
+    background-color: #4F4E79;
+    border-radius: 12px;
+}
+.rd-row{
+    display: flex;
+
 }
 
-td{
-    padding :10px;
-    border: 1px solid black;
-}
-
-th{
-    font-size: larger;
-    color: black;
-    font-weight: bolder;
-    border: 1px solid black;
+.open{
+    font-size: 40px;
+    color:blanchedalmond;
+    text-align: center;
 }
 
 
-
-#totals {
-    color: #000;
-    font-size: larger;
-    font-weight: bolder;
+.contact{
+    display: flex;
+    justify-content: space-around;
 }
+.contact  img.social{
+    width: 30px;
+}
+footer{
+    width: 100%;
+    padding-top: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: #A6F2DB;
+   
+}
+

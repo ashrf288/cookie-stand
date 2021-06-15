@@ -1,0 +1,77 @@
+body{
+    background-color: #A6F2DB;
+}
+header{
+    display: flex;
+    background-color: teal;
+justify-content: space-around;
+    margin-bottom: 40px;
+
+}
+
+h1{
+    font-size: 30px;
+    color: white;
+    padding: 12px;
+    padding-left:80px;
+}
+
+img{
+    width: 200px;
+
+}
+ nav  {
+    font-size: 30px;
+    color: white;
+    padding: 12px;
+    padding-left:80px;
+}
+
+
+.div .time{
+    padding: 80px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+
+}
+
+h1.hours{
+   color:#A9F1DF;
+   font-size: 40px;
+}
+
+
+
+
+table{
+  border: 1px solid black;
+}
+
+td{
+   padding :10px;
+   border: 1px solid black;
+}
+
+th{
+   font-size: larger;
+   color: black;
+   font-weight: bolder;
+   border: 1px solid black;
+}
+
+
+
+#totals {
+   color: #000;
+   font-size: larger;
+   font-weight: bolder;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding-right: 10px;
+}
+ 
