@@ -20,21 +20,7 @@ img{
     width: 200px;
 
 }
- nav  {
-    font-size: 30px;
-    color: white;
-    padding: 12px;
-    padding-left:80px;
-}
-
-
-.div .time{
-    padding: 80px;
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-
-}
+ 
 
 h1.hours{
    color:#A9F1DF;

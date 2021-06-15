@@ -91,4 +91,19 @@ footer{
    background-color: #A6F2DB;
    
 }
+nav  {
+    font-size: 30px;
+    color: white;
+    padding: 12px;
+    padding-left:80px;
+}
 
+
+.div .time{
+    padding: 80px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   font-size: 40px;
+
+}
