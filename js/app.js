@@ -29,37 +29,44 @@ function hoursHeader() {
     workingHours.textContent = 'totals';
 }
 ///// table footer
-    function footer() {
+function footer() {
 
+    ///// total of all cites per hour
+    let totalPerHourArray = [];
+    for (let a = 0; a < 14; a++) {
+        let totalPerHour = 0;
+        totalPerHour += seattle.cookiesPerHourList[a]
+        totalPerHour += tokyo.cookiesPerHourList[a]
+        totalPerHour += dubai.cookiesPerHourList[a]
+        totalPerHour += paris.cookiesPerHourList[a]
+        totalPerHour += lima.cookiesPerHourList[a]
+        totalPerHourArray.push(totalPerHour);
+    }
+    let tableFooter = document.createElement('tfoot');
+    table.appendChild(tableFooter)
+    tableFooter.id='totals';
+    tableFooter.textContent = 'Totals';
 
-        let totalPerHourArray=[];
-        for (let a=0;a<14;a++){
-            let totalPerHour=0;
-            totalPerHour+=seattle.cookiesPerHourList[a]
-            totalPerHour+=tokyo.cookiesPerHourList[a]
-            totalPerHour+=dubai.cookiesPerHourList[a]
-            totalPerHour+=paris.cookiesPerHourList[a]
-            totalPerHour+=lima.cookiesPerHourList[a]
-            totalPerHourArray.push(totalPerHour);
-            }
-            console.log(totalPerHourArray) 
-        let tableFooter = document.createElement('tfoot');
-        table.appendChild(tableFooter)
-        tableFooter.textContent = 'Totals';
-    
-        for (let i = 0; i < workHouers.length; i++) {
-            let cityTotals = document.createElement('th');
-            tableFooter.appendChild(cityTotals);
-            cityTotals.textContent = `${totalPerHourArray[i]}`;
-        }
-    
+    for (let i = 0; i < workHouers.length; i++) {
         let cityTotals = document.createElement('th');
         tableFooter.appendChild(cityTotals);
-        cityTotals.textContent = 'total';
-        
-          
-        
+        cityTotals.textContent = `${totalPerHourArray[i]}`;
     }
+
+    let allTotal=seattle.total;
+    allTotal+=tokyo.total;
+    allTotal+=dubai.total;
+    allTotal+=paris.total;
+    allTotal+=lima.total;
+
+
+    let cityTotals = document.createElement('th');
+    tableFooter.appendChild(cityTotals);
+    cityTotals.textContent = `${allTotal}`;
+
+
+
+}
 
 
 ///// object start
@@ -112,7 +119,7 @@ City.prototype.render = function () {
 
 
 
- 
+
 
 
 

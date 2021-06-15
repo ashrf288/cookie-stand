@@ -47,19 +47,31 @@ p{
 }
 
 footer{
-
+    
     height: 30px;
     color: gray;
 }
 
-
+table{
+   border: 1px solid black;
+}
 
 td{
     padding :10px;
+    border: 1px solid black;
 }
 
 th{
     font-size: larger;
     color: black;
+    font-weight: bolder;
+    border: 1px solid black;
+}
+
+
+
+#totals {
+    color: #000;
+    font-size: larger;
     font-weight: bolder;
 }
