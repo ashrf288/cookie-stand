@@ -61,3 +61,30 @@ a{
     padding-right: 10px;
 }
  
+
+
+form{
+    
+   
+    text-align: center;
+    padding: 20px;
+}
+fieldset{
+    border: 1px solid black;
+    margin: 30px;
+}
+legend{
+    font-size: 30px;
+    color: white;
+}
+
+input{
+    margin: 20px;
+    padding: 10px;
+}
+
+button{
+    padding: 20px;
+    background-color: teal;
+    color: white;
+}

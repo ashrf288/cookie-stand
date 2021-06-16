@@ -1,8 +1,34 @@
 'use strict';
 
 let mainSection = document.getElementById('mainSection');
+let addStand=document.getElementById('addStand');
+let allTotal=0;
 
 
+function formSubmtion(event){
+    event.preventDefault();
+  let newName=event.target.city.value;
+  let newMinCustomer=event.target.minCustomers.value;
+  let newMaxCustomer=event.target.maxCustomers.value;
+  let newAverage=event.target.average.value;
+  let newCity = new City(newName, newMinCustomer, newMaxCustomer, newAverage, 0);
+  newCity.cookiesPerHour();
+newCity.render();
+
+console.log(allTotal)
+
+console.log(newCity.total);
+
+}
+
+
+addStand.addEventListener("submit",formSubmtion);
+
+
+
+
+
+console.log(addStand)
 let table = document.createElement('table');
 mainSection.appendChild(table);
 
@@ -30,18 +56,30 @@ function hoursHeader() {
 }
 ///// table footer
 function footer() {
+     
 
     ///// total of all cites per hour
     let totalPerHourArray = [];
+    
     for (let a = 0; a < 14; a++) {
         let totalPerHour = 0;
+       
         totalPerHour += seattle.cookiesPerHourList[a]
         totalPerHour += tokyo.cookiesPerHourList[a]
         totalPerHour += dubai.cookiesPerHourList[a]
         totalPerHour += paris.cookiesPerHourList[a]
         totalPerHour += lima.cookiesPerHourList[a]
+
+
+       
+
+        
         totalPerHourArray.push(totalPerHour);
     }
+
+
+
+  
     let tableFooter = document.createElement('tfoot');
     table.appendChild(tableFooter)
     tableFooter.id='totals';
@@ -52,21 +90,21 @@ function footer() {
         tableFooter.appendChild(cityTotals);
         cityTotals.textContent = `${totalPerHourArray[i]}`;
     }
-
-    let allTotal=seattle.total;
-    allTotal+=tokyo.total;
-    allTotal+=dubai.total;
-    allTotal+=paris.total;
-    allTotal+=lima.total;
+   
+   
 
 
     let cityTotals = document.createElement('th');
     tableFooter.appendChild(cityTotals);
     cityTotals.textContent = `${allTotal}`;
 
-
+      return totalPerHourArray;
 
 }
+
+
+
+    
 
 
 ///// object start
@@ -78,6 +116,7 @@ function City(name, minCustomers, maxCustomers,avg) {
     this.average = avg,
     this.cookiesPerHourList = [];
     this.total = 0;
+    
 }
 
 //// prototypes
@@ -91,7 +130,7 @@ City.prototype.cookiesPerHour = function () {
         this.cookiesPerHourList.push(cookie);
         this.total = this.total + cookie;
     }
-    ;
+    return this.total;
 };
 
 
@@ -170,5 +209,10 @@ lima.render();
 
 
 
+
+
+
 footer();
+
+
 
