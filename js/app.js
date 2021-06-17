@@ -1,10 +1,19 @@
-'use strict';
+
+
 
 let mainSection = document.getElementById('mainSection');
 let addStand=document.getElementById('addStand');
-let allTotal=0;
 
-let cityTotals = document.createElement('th');
+let table = document.createElement('table');
+mainSection.appendChild(table);
+
+let workHouers = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm',
+    '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+
+
+
+
+
 function formSubmtion(event){
     event.preventDefault();
   let newName=event.target.city.value;
@@ -14,12 +23,9 @@ function formSubmtion(event){
   let newCity = new City(newName, newMinCustomer, newMaxCustomer, newAverage, 0);
   newCity.cookiesPerHour();
 newCity.render();
-// add new city total 
  
  cityTotals.textContent =allTotal+newCity.total;
-////////////////////////
-
-
+ 
      
 
 }
@@ -30,12 +36,6 @@ addStand.addEventListener("submit",formSubmtion);
 
 
 
-
-let table = document.createElement('table');
-mainSection.appendChild(table);
-
-let workHouers = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm',
-    '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 
 
@@ -92,7 +92,7 @@ function footer() {
         tableFooter.appendChild(cityTotals);
         cityTotals.textContent = `${totalPerHourArray[i]}`;
     }
-   
+   allTotal=0;
    allTotal+=seattle.total;
    allTotal+=tokyo.total;
    allTotal+=dubai.total;

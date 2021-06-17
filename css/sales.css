@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+
 body{
     background-color: #A6F2DB;
 }
@@ -75,7 +78,8 @@ fieldset{
 }
 legend{
     font-size: 30px;
-    color: white;
+    color: black;
+    font-family: 'Acme';
 }
 
 input{
@@ -87,4 +91,14 @@ button{
     padding: 20px;
     background-color: teal;
     color: white;
+}
+
+table{
+    background-color: white;
+    margin:10px;
+    font-family: 'Acme';
+}
+
+fieldset{
+    background-color:lightgrey;
 }

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+
+
 body{
     background-color: #A9F1DF;
 }
@@ -15,6 +19,7 @@ header img {
 header h1{
     font-size: 30px;
     font-weight: bold;
+    font-family: 'Staatliches';
 }
 header a{
     text-decoration: none;
@@ -26,6 +31,7 @@ header a{
 
 h2.cityName{
     font-weight: bold;
+    font-family: 'Staatliches'
 }
 
 
@@ -96,6 +102,7 @@ nav  {
     color: white;
     padding: 12px;
     padding-left:80px;
+    font-family: 'Staatliches';
 }
 
 
