@@ -4,7 +4,7 @@ let mainSection = document.getElementById('mainSection');
 let addStand=document.getElementById('addStand');
 let allTotal=0;
 
-
+let cityTotals = document.createElement('th');
 function formSubmtion(event){
     event.preventDefault();
   let newName=event.target.city.value;
@@ -14,10 +14,13 @@ function formSubmtion(event){
   let newCity = new City(newName, newMinCustomer, newMaxCustomer, newAverage, 0);
   newCity.cookiesPerHour();
 newCity.render();
+// add new city total 
+ 
+ cityTotals.textContent =allTotal+newCity.total;
+////////////////////////
 
-console.log(allTotal)
 
-console.log(newCity.total);
+     
 
 }
 
@@ -28,7 +31,6 @@ addStand.addEventListener("submit",formSubmtion);
 
 
 
-console.log(addStand)
 let table = document.createElement('table');
 mainSection.appendChild(table);
 
@@ -72,12 +74,12 @@ function footer() {
 
 
        
-
+   
         
         totalPerHourArray.push(totalPerHour);
     }
 
-
+    
 
   
     let tableFooter = document.createElement('tfoot');
@@ -91,10 +93,15 @@ function footer() {
         cityTotals.textContent = `${totalPerHourArray[i]}`;
     }
    
-   
+   allTotal+=seattle.total;
+   allTotal+=tokyo.total;
+   allTotal+=dubai.total;
+   allTotal+=paris.total;
+   allTotal+=lima.total;
 
 
-    let cityTotals = document.createElement('th');
+
+    cityTotals = document.createElement('th');
     tableFooter.appendChild(cityTotals);
     cityTotals.textContent = `${allTotal}`;
 
