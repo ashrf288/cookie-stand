@@ -22,7 +22,7 @@ function formSubmtion(event){
   let newCity = new City(newName, newMinCustomer, newMaxCustomer, newAverage, 0);
   newCity.cookiesPerHour();
 newCity.render();
-makeTableFooter();
+
  
   
      
@@ -143,7 +143,7 @@ City.prototype.render = function () {
     workingHoursData = document.createElement('td');
     workingHoursData.textContent = ` ${this.total} cookies`
     workingHoursRow1.appendChild(workingHoursData);
-
+    makeTableFooter();
 
 
 
